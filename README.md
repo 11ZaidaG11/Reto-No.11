@@ -18,10 +18,10 @@ Estos metodos regresan True cuando... :
 - Cantidad de consonantes  
 - Listado de las 50 palabras que más se repiten
 
-```
+```python
 def vocales(archivo) -> int:
     vocal = "aeiouAEIOU"
-    cuenta_v = 0 # Inicializar
+    cuenta_v = 0 # Inicializar cuenta
 
     for i in archivo: # Por cada linea en el archivo
         for j in i: # Por cada caracter en cada linea
@@ -33,7 +33,7 @@ def vocales(archivo) -> int:
 
 def consonantes(archivo) -> int:
     conso = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ"
-    cuenta_c = 0
+    cuenta_c = 0 # Inicializar cuenta
 
     for i in archivo: # Por cada linea en el archivo
         for j in i: # Por cada caracter en cada linea
@@ -67,9 +67,7 @@ def repetidas(archivo) -> list:
             cuenta += 1
             if cuenta == 50:
                 break
-        
         return cincuenta
-
 
 if __name__ == "__main__":
     with open("mbox.txt") as archivo:
